@@ -28,7 +28,7 @@ Feature: Login functionality
 
     Examples: valid username and passwords for MARKETING users
       | email                           | password |
-      | marketing80@cybertekschool.com  | UserUser |
+      | marketing52@cybertekschool.com  | UserUser |
       | marketing90@cybertekschool.com  | UserUser |
       | marketing100@cybertekschool.com | UserUser |
 
@@ -102,7 +102,7 @@ Feature: Login functionality
       | helpdesk7@cybertekschool.com | UserUser | helpdesk7@cybertekschool.com |
       | helpdesk10@cybertekschool.com | UserUser | helpdesk10@cybertekschool.com |
       | helpdesk45@cybertekschool.com | UserUser | helpdesk45@cybertekschool.com |
-      | helpdesk75@cybertekschool.com | UserUser | helpdesk75@cybertekschool.com |
+      | helpdesk57@cybertekschool.com | UserUser | helpdesk57@cybertekschool.com |
 
     Examples: username and passwords for HR users
       | email                   | password | profileName             |
