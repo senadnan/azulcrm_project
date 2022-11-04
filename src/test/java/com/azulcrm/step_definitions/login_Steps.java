@@ -123,7 +123,7 @@ public class login_Steps {
     @Then("User should see password in bullet signs by default")
     public void user_should_see_password_in_bullet_signs_by_default() {
         String expectedAttributeValue = "password";
-        Assert.assertEquals(loginPage.passInput.getAttribute("type"), expectedAttributeValue);
+        Assert.assertEquals(expectedAttributeValue, loginPage.passInput.getAttribute("type"));
     }
 
     //ENTER KEY VERIFICATION
@@ -142,7 +142,7 @@ public class login_Steps {
     // PROFILE NAME VERIFICATION
     @Then("User should see his own profileName {string} in the profile menu, after successful login")
     public void user_should_see_his_her_own_username_in_the_profile_menu_after_successful_login(String profileName) {
-        Assert.assertEquals(dashboardPage.profileName.getText(), profileName);
+        Assert.assertEquals(profileName, dashboardPage.profileName.getText());
     }
 
 
