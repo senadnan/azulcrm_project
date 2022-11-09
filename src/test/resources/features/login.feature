@@ -4,7 +4,7 @@ Feature: Login functionality
   Background:
     Given User goes to the login page
 
-  @AZUL-1419 @wip
+  @AZUL-1419
   Scenario Outline: As a user, I should be able to log in the application
     When User enters valid email "<email>" in to the login input box
     And User enter valid password "<password>" in to the password input box
@@ -32,7 +32,7 @@ Feature: Login functionality
       | marketing90@cybertekschool.com  | UserUser |
       | marketing100@cybertekschool.com | UserUser |
 
-  @AZUL-1421 @wip
+  @AZUL-1421
   Scenario Outline:"Incorrect login or password." should be displayed for invalid
   (valid username-invalid password and invalid username-valid password) credentials
 
@@ -60,37 +60,37 @@ Feature: Login functionality
       | hr50@cybertekschool.com        | sdf123sdf   |
       | marketing80@cybertekschool.com | marketing80 |
 
-  @AZUL-1422 @wip
+  @AZUL-1422
   Scenario: Please fill out this field" message should be displayed if the password or username is empty
     When User enters email ""
     And User enters password ""
     And User clicks login button
     Then User should see "Please fill out this field" message
 
-  @AZUL-1423 @wip
+  @AZUL-1423
   Scenario: User land on the ‘Get Password’ page after clicking on the "Forgot your password?" link
     When User Clicks "Forgot your password?" link
     Then User should lands on the "Get Password" page
 
-  @AZUL-1424 @wip
+  @AZUL-1424
   Scenario: User can see "Remember Me" link exists and is clickable on the login page
     When User is on the login page
     Then User should see "Remember me on this computer" link exists and is clickable
 
-  @AZUL-1425 @wip
+  @AZUL-1425
   Scenario: User should see the password in bullet signs by default
     When User enters password "UserUser" into the password input box
     Then User should see password in bullet signs by default
 
-  @AZUL-1426 @wip
+  @AZUL-1426
   Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
     When User enters valid email "helpdesk1@cybertekschool.com" in to the login input box
     And User enter valid password "UserUser" in to the password input box
     And User hits the ENTER key of the keyboard to login the application
     Then Enter key is should be worked
 
-  @AZUL-1427 @wip
-  Scenario Outline:All users can see their own usernames in the profile menu, after successful login
+  @AZUL-1427
+  Scenario Template:All users can see their own usernames in the profile menu, after successful login
     When User enters valid email "<email>" in to the login input box
     And User enter valid password "<password>" in to the password input box
     And User clicks login button

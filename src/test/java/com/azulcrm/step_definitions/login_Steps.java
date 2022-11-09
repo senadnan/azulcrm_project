@@ -87,12 +87,18 @@ public class login_Steps {
 
     @When("User Clicks {string} link")
     public void userClicksLink(String link) {
+        BrowserUtils.sleep(2);
         loginPage.forgotPasswordLink.click();
+
     }
 
     @Then("User should lands on the {string} page")
     public void userShouldLandsOnThePage(String getPasswordText) {
+        BrowserUtils.sleep(2);
         Assert.assertTrue(getPasswordPage.getPasswordText.isDisplayed());
+
+        System.out.println("web element isDisplayed = " + getPasswordPage.getPasswordText.isDisplayed());
+
     }
 
     // REMEMBER ME CHECKBOX AND TEXT VERIFICATION
