@@ -8,13 +8,13 @@ Feature: Message functionality
     Then User login to the application successfully
     When User clicks MESSAGE module
 
-
+@smoke
   Scenario: User should be able to send a message by filling in the mandatory fields.
     When User writes a message "text" into Message box
     Then User clicks SEND button
     And User should see the created Message on the Active Stream
 
-  @wip
+
   Scenario:The message delivery should be to 'All employees' by default and should be changeable.
     When User writes a message "text" into Message box
     Then All Employees button should be seen as default recipient
