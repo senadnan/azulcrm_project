@@ -96,6 +96,8 @@ public class logOut_Steps {
         Driver.getDriver().switchTo().window(sessionIDs.get(1));
         Driver.getDriver().navigate().to(ConfigurationReader.getProperty("web.url"));
     }
+
+
 }
 
 
