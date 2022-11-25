@@ -66,10 +66,10 @@ public class login_Steps {
         loginPage.login(email, password);
     }
 
-    @Then("User should see {string} message")
-    public void user_should_see_message(String errorMessage) {
-        Assert.assertEquals(errorMessage, loginPage.incorrectLoginMessage.getText());
-    }
+//    @Then("User should see {string} message")
+//    public void user_should_see_message(String errorMessage) {
+//        Assert.assertEquals(errorMessage, loginPage.incorrectLoginMessage.getText());
+//    }
 
     // TESTING WITH BLANK CREDENTIALS
 

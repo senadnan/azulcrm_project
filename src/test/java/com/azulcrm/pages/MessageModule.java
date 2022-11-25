@@ -20,7 +20,7 @@ public class MessageModule {
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendBtn;
 
-    @FindBy(css = "button[id=\"blog-submit-button-cancel\"]")
+    @FindBy(xpath ="//button[@id='blog-submit-button-cancel']")
     public WebElement cancelBtn;
 
     @FindBy(xpath = "//span[@class=\"feed-add-post-destination-text\"]")
@@ -35,30 +35,31 @@ public class MessageModule {
     @FindBy(css = "span[title=\"Topic\"]")
     public WebElement topicBtn;
 
-    @FindBy(css = "input[id=\"POST_TITLE\"]")
-    public WebElement inputTopic;
+    @FindBy(xpath = "//input[@id='POST_TITLE']")
+    public WebElement postTitle;
 
-    @FindBy (xpath = "/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[3]/div[2]/div[1]/div/div[1]/div[3]/div[1]/div")
+    @FindBy(xpath = "/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[3]/div[2]/div[1]/div/div[1]/div[3]/div[1]/div")
     public WebElement createdMessage;
+
+    @FindBy(linkText = ("Wooden Spoon"))
+    public WebElement createdMessageTitle;
 
     @FindBy(css = "body[style=\"min-height: 184px;\"]")
     public WebElement messageBody;
 
-    @FindBy(css = "span[class=\"feed-add-post-del-but\"]")
+    @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
     public WebElement removeAllEmp;
 
     @FindBy(xpath = "//*[@id='bx-destination-tag']")
     public WebElement addRecipients;
 
-    @FindBy(xpath = "//div[@class='bx-finder-box-item-t7-info']" )
-    public List<WebElement> recentPerson;
+    @FindBy(xpath = "//*[@class='bx-finder-company-department-text']")
+    public List<WebElement> departments;
 
     public String email1 = "helpdesk38@cybertekschool.com";
     public String email2 = "hr77@cybertekschool.com";
     public String email3 = "helpdesk24@cybertekschool.com";
-
-    @FindBy(xpath = "//a[starts-with(@id, \"destDepartmentTab_destination\")]")
-    public WebElement empDepBtn;
+    public String department1 = "Salesforce Department";
 
     @FindBy(linkText = "Employees and departments")
     public WebElement employeesAndDepartmentsTab;
@@ -66,37 +67,39 @@ public class MessageModule {
     @FindBy(xpath = "//div[@class='bx-finder-company-department-employee-name']")
     public List<WebElement> employeesAndDepartments;
 
-    @FindBy(xpath = "//div[.=\"QA department\"]")
-    public WebElement qaDepBtn;
+    @FindBy(xpath = "//*[.='Salesforce Department']")
+    public WebElement salesForceDep;
 
-    @FindBy(xpath = "//div[@rel=\"QA department: All department and subdepartment employees\"]")
-    public WebElement qaSubDepBtn;
+    @FindBy(xpath = "//*[@rel='Salesforce Department: All department and subdepartment employees']")
+    public WebElement salesForceSubDep;
 
-    @FindBy(css = "input[id=\"feed-add-post-destination-input\"]")
-    public WebElement inputAddRecipient;
-
-    @FindBy(xpath = "//input[@id=\"feed-add-post-destination-input\"]")
+    @FindBy(xpath = "//*[@id='feed-add-post-destination-input']")
     public WebElement searchRecipientInput;
 
-    @FindBy(css = "span[class=\"feed-add-info-text\"]")
+    @FindBy(xpath = "//span[.='The message title is not specified']")
     public WebElement messageTitleError;
 
-    @FindBy(css = "span[class=\"feed-add-info-text\"]")
+    @FindBy(xpath = "//span[.='Please specify at least one person.']")
     public WebElement noRecipientError;
+
+
+    @FindBy(xpath = "//span[.='The message text is empty.']")
+    public WebElement messageTextError;
 
 
     @FindBy(css = "input[id=\"LIVEFEED_search\"]")
     public WebElement searchBox;
 
 
-    @FindBy(css = "span[id=\"feed-post-more-2571\"]")
+
+    @FindBy(css = "span[id='feed-post-more-2786']")
     public WebElement moreBtn;
+
 
 
     @FindBy(xpath = "(//span[@class='menu-popup-item-text'])[7]")
     // span[contains(text(),'Delete')]
     public WebElement delBtn;
-
 
     @FindBy(xpath = "//span[contains(text(),'The post has been deleted.')]")
     public WebElement postDeletedMessage;
@@ -104,6 +107,5 @@ public class MessageModule {
     @FindBy(xpath = "//div[contains(text(),'Searching')]")
     public WebElement searchResultWindow;
 
-    @FindBy(xpath = "//div[@id='feed-add-post-destination-container']")
-    public WebElement searchUser;
+
 }
