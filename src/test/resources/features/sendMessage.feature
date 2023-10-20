@@ -15,7 +15,7 @@ Feature: Message functionality
     Given User goes to the login page
     Then User login to the application successfully
 
-
+@smoke
   Scenario: User should be able to send a message by filling in the mandatory fields.
     When User clicks MESSAGE module
     Then User writes a message "title" and "text" into Message box
